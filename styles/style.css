@@ -1,0 +1,396 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face{
+  font-family: 'pixel-font';
+  src: url("./font/VT323-Regular.ttf");
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#slideshow-container {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.slide {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* start of page one */
+
+#why-paragraph {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.grid-main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-bio {
+  display: grid;
+  grid-gap: 1em;
+  margin-top: 10%;
+  margin-left: 10%;
+  color: black;
+  text-align: left;
+
+  font-family: "pixel-font"
+}
+
+.grid-popcorn {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(0px, 3fr));
+}
+
+#popcorn1 {
+    width: 10vw;
+}
+
+.popcorn1-img {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+#popcorn3 {
+  width: 4vw;
+}
+
+.popcorn3-img {
+  grid-column: 1/2;
+  grid-row: 3/3;
+}
+
+#popcorn5 {
+    width: 10vw;
+}
+
+.popcorn5-img {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+#popcorn6 {
+    width: 8vw;
+}
+
+.popcorn6-img {
+  grid-column: 3/3;
+  grid-row: 3/3;
+}
+
+/* end of page one*/
+
+/* start of page two*/
+
+#here-img{
+  position: relative;
+  width: 32px; 
+  height: auto;
+  padding: .7rem 1.5rem;
+}
+
+.popcorn-bag-div {
+  position: relative;
+}
+
+.popcorn-bag-div img {
+  position: fixed;
+  bottom: 0;
+  right: 5%;
+  width: 25vw;
+}
+
+.timeline{
+    --uiTimelineMainColor: var(--timelineMainColor, white);
+    --uiTimelineSecondaryColor: var(--timelineSecondaryColor, white);
+  
+    position: relative;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-left: 10%;
+  }
+  
+  .timeline:before{
+    content: "";
+    width: 4px;
+    height: 100%;
+    background-color: var(--uiTimelineMainColor);
+  
+    position: absolute;
+    top: 0;
+  }
+  
+  .timeline-group{
+    position: relative;
+  }
+  
+  .timeline-group:not(:first-of-type){
+    margin-top: 4rem;
+  }
+  
+  .timeline-year{
+    font-size: 2rem;
+    background: url(/images/special_offer.png);
+    background-repeat: no-repeat;
+      background-size: 100% 100%;
+      -webkit-background-size: 100% 100%; /*  Safari  */
+      -khtml-background-size: 100% 100%; /*  Konqueror  */
+      -moz-background-size: 100% 100%; /*  Firefox  */
+    padding: .7rem 1.5rem;
+    color: black;
+    background-image: url(../images/year-textbox.png);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  
+  .timeline-box{
+    position: relative;
+  }
+  
+  .timeline-box:not(:last-of-type){
+    margin-bottom: 30px;
+  }
+  
+  .timeline-box:before{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--uiTimelineMainColor);
+  
+    position: absolute;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .timeline-date{
+    min-width: 65px;
+    position: absolute;
+    left: 0;
+  
+    box-sizing: border-box;
+    padding: .7rem 1.5rem;
+  
+    background-image: url(../images/term-textbox.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+      -webkit-background-size: 100% 100%; /*  Safari  */
+      -khtml-background-size: 100% 100%; /*  Konqueror  */
+      -moz-background-size: 100% 100%; /*  Firefox  */
+
+    color: black;
+  }
+  
+  .timeline-term{
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: block;
+  }
+  
+  .timeline-month{
+    display: block;
+    font-size: .8em;
+  }
+  
+  .timeline-post{
+    padding: 1.5rem 2rem;
+    border-left: 3px solid var(--uiTimelineMainColor);
+    background-color: var(--uiTimelineSecondaryColor);
+  }
+  
+  @media screen and (min-width: 641px){
+  
+    .timeline:before{
+      left: 30px;
+    }
+  
+    .timeline-group{
+      padding-top: 55px;
+    }
+  
+    .timeline-box{
+      padding-left: 80px;
+    }
+
+    .timeline-box:before{
+      top: 50%;
+      transform: translateY(-50%);  
+    }  
+  
+    .timeline-date{
+      top: 50%;
+      margin-top: -27px;
+    }
+  }
+  
+  @media screen and (max-width: 640px){
+  
+    .timeline:before{
+      left: 0;
+    }
+  
+    .timeline-group{
+      padding-top: 40px;
+    }
+  
+    .timeline-box{
+      padding-left: 20px;
+      padding-top: 70px;
+    }
+  
+    #here-img{
+      padding-left: 0px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .timeline-box:before{
+      top: 90px;
+    }    
+  
+    .timeline-date{
+      top: 0;
+    }
+  }
+  
+  .timeline{
+    --timelineMainColor: black;
+    font-size: 16px;
+  }
+    
+  @media (min-width: 768px){
+  
+    html{
+      font-size: 62.5%;
+    }
+  }
+  
+  @media (max-width: 767px){
+  
+    html{
+      font-size: 55%;
+    }
+  }
+
+  body{
+    font-family: 'pixel-font';
+    font-size: 1.6rem;
+  
+    margin: 0;
+    -webkit-overflow-scrolling: touch;   
+    overflow-y: scroll;
+    
+    display: flex;
+    flex-direction: column;
+  }
+  
+  p{
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  p:last-child{
+    margin-bottom: 0;
+  }
+  
+  
+.education-img{
+  width: 48px;
+}
+
+/* end of page two */
+
+/* start of page three */
+
+#skills-div {
+  margin-left: 10%;
+  margin-top: 10%;
+  display: -moz-inline-stack
+}
+
+.image-des p{
+  display: inline;  
+  font-size: 3.5rem;
+}
+
+#tools-div img{
+  padding-right: 12px;
+  display: inline;  
+  width: 36px;
+}
+
+#project-div img{
+  padding-right: 12px;
+  display: inline;  
+  width: 48px;
+}
+
+ul.tools-list {
+  list-style-type: square;
+  font-size: 2.5rem;
+}
+
+ul.projects-list {
+  list-style-type: square;
+  font-size: 2.5rem;
+}
+
+.popcorn-floor-div {
+  position: relative;
+}
+
+.popcorn-floor-div img {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width:32vw;
+}
+
+/* end of page three */
+
+/* start of bottom navigation */
+
+.page-indicator {
+  height: 2.5rem;
+}
+
+#bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1vh;
+}
+
+#bottom-navigation :hover img {
+  transform: scale(1.1);
+}
+
+/* end of bottom navigation */
+
