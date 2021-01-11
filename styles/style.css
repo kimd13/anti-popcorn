@@ -2,8 +2,8 @@ html {
   scroll-behavior: smooth;
 }
 
-@font-face{
-  font-family: 'pixel-font';
+@font-face {
+  font-family: "pixel-font";
   src: url("./font/VT323-Regular.ttf");
 }
 
@@ -55,7 +55,7 @@ body {
   color: black;
   text-align: left;
 
-  font-family: "pixel-font"
+  font-family: "pixel-font";
 }
 
 .grid-popcorn {
@@ -66,7 +66,7 @@ body {
 }
 
 #popcorn1 {
-    width: 10vw;
+  width: 10vw;
 }
 
 .popcorn1-img {
@@ -84,7 +84,7 @@ body {
 }
 
 #popcorn5 {
-    width: 10vw;
+  width: 10vw;
 }
 
 .popcorn5-img {
@@ -93,7 +93,7 @@ body {
 }
 
 #popcorn6 {
-    width: 8vw;
+  width: 8vw;
 }
 
 .popcorn6-img {
@@ -105,11 +105,11 @@ body {
 
 /* start of page two*/
 
-#here-img{
+#here-img {
   position: relative;
-  width: 32px; 
+  width: 32px;
   height: auto;
-  padding: .7rem 1.5rem;
+  padding: 0.7rem 1.5rem;
 }
 
 .popcorn-bag-div {
@@ -120,207 +120,201 @@ body {
   position: fixed;
   bottom: 0;
   right: 5%;
-  width: 25vw;
+  width: 20vw;
 }
 
-.timeline{
-    --uiTimelineMainColor: var(--timelineMainColor, white);
-    --uiTimelineSecondaryColor: var(--timelineSecondaryColor, white);
-  
-    position: relative;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    margin-left: 10%;
+.timeline {
+  --uiTimelineMainColor: var(--timelineMainColor, white);
+  --uiTimelineSecondaryColor: var(--timelineSecondaryColor, white);
+
+  position: relative;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-left: 10%;
+}
+
+.timeline:before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background-color: var(--uiTimelineMainColor);
+
+  position: absolute;
+  top: 0;
+}
+
+.timeline-group {
+  position: relative;
+}
+
+.timeline-group:not(:first-of-type) {
+  margin-top: 4rem;
+}
+
+.timeline-year {
+  font-size: 2rem;
+  background: url(/images/special_offer.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -webkit-background-size: 100% 100%; /*  Safari  */
+  -khtml-background-size: 100% 100%; /*  Konqueror  */
+  -moz-background-size: 100% 100%; /*  Firefox  */
+  padding: 0.7rem 1.5rem;
+  color: black;
+  background-image: url(../images/year-textbox.png);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.timeline-box {
+  position: relative;
+}
+
+.timeline-box:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+
+.timeline-box:before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--uiTimelineMainColor);
+
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+
+.timeline-date {
+  min-width: 65px;
+  position: absolute;
+  left: 0;
+
+  box-sizing: border-box;
+  padding: 0.7rem 1.5rem;
+
+  background-image: url(../images/term-textbox.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -webkit-background-size: 100% 100%; /*  Safari  */
+  -khtml-background-size: 100% 100%; /*  Konqueror  */
+  -moz-background-size: 100% 100%; /*  Firefox  */
+
+  color: black;
+}
+
+.timeline-term {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: block;
+}
+
+.timeline-month {
+  display: block;
+  font-size: 0.8em;
+}
+
+.timeline-post {
+  padding: 1.5rem 2rem;
+  border-left: 3px solid var(--uiTimelineMainColor);
+  background-color: var(--uiTimelineSecondaryColor);
+}
+
+@media screen and (min-width: 641px) {
+  .timeline:before {
+    left: 30px;
   }
-  
-  .timeline:before{
-    content: "";
-    width: 4px;
-    height: 100%;
-    background-color: var(--uiTimelineMainColor);
-  
-    position: absolute;
+
+  .timeline-group {
+    padding-top: 55px;
+  }
+
+  .timeline-box {
+    padding-left: 80px;
+  }
+
+  .timeline-box:before {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .timeline-date {
+    top: 50%;
+    margin-top: -27px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .timeline:before {
+    left: 0;
+  }
+
+  .timeline-group {
+    padding-top: 40px;
+  }
+
+  .timeline-box {
+    padding-left: 20px;
+    padding-top: 70px;
+  }
+
+  #here-img {
+    padding-left: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .timeline-box:before {
+    top: 90px;
+  }
+
+  .timeline-date {
     top: 0;
   }
-  
-  .timeline-group{
-    position: relative;
-  }
-  
-  .timeline-group:not(:first-of-type){
-    margin-top: 4rem;
-  }
-  
-  .timeline-year{
-    font-size: 2rem;
-    background: url(/images/special_offer.png);
-    background-repeat: no-repeat;
-      background-size: 100% 100%;
-      -webkit-background-size: 100% 100%; /*  Safari  */
-      -khtml-background-size: 100% 100%; /*  Konqueror  */
-      -moz-background-size: 100% 100%; /*  Firefox  */
-    padding: .7rem 1.5rem;
-    color: black;
-    background-image: url(../images/year-textbox.png);
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
+}
 
-  
-  .timeline-box{
-    position: relative;
-  }
-  
-  .timeline-box:not(:last-of-type){
-    margin-bottom: 30px;
-  }
-  
-  .timeline-box:before{
-    content: "";
-    width: 100%;
-    height: 2px;
-    background-color: var(--uiTimelineMainColor);
-  
-    position: absolute;
-    left: 0;
-    z-index: -1;
-  }
-  
-  .timeline-date{
-    min-width: 65px;
-    position: absolute;
-    left: 0;
-  
-    box-sizing: border-box;
-    padding: .7rem 1.5rem;
-  
-    background-image: url(../images/term-textbox.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-      -webkit-background-size: 100% 100%; /*  Safari  */
-      -khtml-background-size: 100% 100%; /*  Konqueror  */
-      -moz-background-size: 100% 100%; /*  Firefox  */
+.timeline {
+  --timelineMainColor: black;
+  font-size: 16px;
+}
 
-    color: black;
+@media (min-width: 768px) {
+  html {
+    font-size: 62.5%;
   }
-  
-  .timeline-term{
-    font-size: 1.5rem;
-    font-weight: 700;
-    display: block;
-  }
-  
-  .timeline-month{
-    display: block;
-    font-size: .8em;
-  }
-  
-  .timeline-post{
-    padding: 1.5rem 2rem;
-    border-left: 3px solid var(--uiTimelineMainColor);
-    background-color: var(--uiTimelineSecondaryColor);
-  }
-  
-  @media screen and (min-width: 641px){
-  
-    .timeline:before{
-      left: 30px;
-    }
-  
-    .timeline-group{
-      padding-top: 55px;
-    }
-  
-    .timeline-box{
-      padding-left: 80px;
-    }
+}
 
-    .timeline-box:before{
-      top: 50%;
-      transform: translateY(-50%);  
-    }  
-  
-    .timeline-date{
-      top: 50%;
-      margin-top: -27px;
-    }
+@media (max-width: 767px) {
+  html {
+    font-size: 55%;
   }
-  
-  @media screen and (max-width: 640px){
-  
-    .timeline:before{
-      left: 0;
-    }
-  
-    .timeline-group{
-      padding-top: 40px;
-    }
-  
-    .timeline-box{
-      padding-left: 20px;
-      padding-top: 70px;
-    }
-  
-    #here-img{
-      padding-left: 0px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
+}
 
-    .timeline-box:before{
-      top: 90px;
-    }    
-  
-    .timeline-date{
-      top: 0;
-    }
-  }
-  
-  .timeline{
-    --timelineMainColor: black;
-    font-size: 16px;
-  }
-    
-  @media (min-width: 768px){
-  
-    html{
-      font-size: 62.5%;
-    }
-  }
-  
-  @media (max-width: 767px){
-  
-    html{
-      font-size: 55%;
-    }
-  }
+body {
+  font-family: "pixel-font";
+  font-size: 1.6rem;
 
-  body{
-    font-family: 'pixel-font';
-    font-size: 1.6rem;
-  
-    margin: 0;
-    -webkit-overflow-scrolling: touch;   
-    overflow-y: scroll;
-    
-    display: flex;
-    flex-direction: column;
-  }
-  
-  p{
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    line-height: 1.5;
-  }
-  
-  p:last-child{
-    margin-bottom: 0;
-  }
-  
-  
-.education-img{
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.education-img {
   width: 48px;
 }
 
@@ -331,23 +325,23 @@ body {
 #skills-div {
   margin-left: 10%;
   margin-top: 10%;
-  display: -moz-inline-stack
+  display: -moz-inline-stack;
 }
 
-.image-des p{
-  display: inline;  
+.image-des p {
+  display: inline;
   font-size: 3.5rem;
 }
 
-#tools-div img{
+#tools-div img {
   padding-right: 12px;
-  display: inline;  
+  display: inline;
   width: 36px;
 }
 
-#project-div img{
+#project-div img {
   padding-right: 12px;
-  display: inline;  
+  display: inline;
   width: 48px;
 }
 
@@ -369,7 +363,17 @@ ul.projects-list {
   position: fixed;
   bottom: 0;
   right: 0;
-  width:32vw;
+  width: 32vw;
+}
+
+#github-img{
+  padding-right: 12px;
+  width: 24px;
+}
+
+#sources-div p{
+  display: inline;
+  font-size: 1.5rem;
 }
 
 /* end of page three */
