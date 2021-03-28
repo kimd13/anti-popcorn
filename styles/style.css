@@ -230,13 +230,13 @@ body {
   color: black;
 }
 
-.timeline-term {
+.timeline-month {
   font-size: 1.5rem;
   font-weight: 700;
   display: block;
 }
 
-.timeline-month {
+.timeline-year-sub {
   display: block;
   font-size: 0.8em;
 }
@@ -378,6 +378,7 @@ ul.tools-list {
 ul.projects-list {
   list-style-type: square;
   font-size: 2.5rem;
+  padding-bottom: 5rem;
 }
 
 .popcorn-floor-div {
@@ -394,12 +395,6 @@ ul.projects-list {
 #github-img{
   padding-right: 12px;
   width: 24px;
-}
-
-#sources-div p{
-  display: inline;
-  font-size: 1.5rem;
-  padding-bottom: 5rem;
 }
 
 /* end of page three */
