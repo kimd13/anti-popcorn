@@ -30,4 +30,5 @@ function showSlides(index) {
     slides[i].style.display = "none";
   }
   slides[slideIndex].style.display = "block";
+  window.screenTop(0, 0)
 }
