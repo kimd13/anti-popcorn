@@ -29,5 +29,6 @@ function showSlides(index) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
+  slides[slideIndex].scrollTop = 0
   slides[slideIndex].style.display = "block";
 }
